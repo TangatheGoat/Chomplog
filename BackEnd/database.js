@@ -12,10 +12,10 @@ const db = new sqlite3.Database("./database.sqlite", (err) => {
     CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     username TEXT,
-    email TEXT UNIQUE2,
+    email TEXT UNIQUE,
     password TEXT,
     salt TEXT,
-    created_at TEXT
+    created_at TEXT,
     loginToken TEXT
 )`);
     // -- Searches table (for search history)

@@ -2,9 +2,9 @@
 const Users = require("../Group11-main/Models/Users.Models");
 const loggedIn = function (req, res, next) {
   let XAuth = req.get("Authorization");
-  Users.getIdFromXAuth(XAuth, (err, id) => {
+  Users.getId(XAuth, (err, id) => {
     if (err || id == null) {
-      return res.statuse(401).send("id is null");
+      return res.status(401).send("id is null");
     }
     return id, next();
   });

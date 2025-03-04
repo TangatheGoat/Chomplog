@@ -1,5 +1,4 @@
 //@degas123
-const { reinstall } = require("npm-git-install");
 const Users = require("../Models/Users.Models");
 const Joi = require("joi");
 const password = new RegExp(
@@ -50,15 +49,17 @@ const login = (req, res) => {
       return res
         .status(400)
         .send({ error_message: "Invalid email/Password supplied" });
-    if (err) return res.sendStatus(500);
+    if (err) return res.status(500).send("err");
 
     Users.getLoginToken(id, (err, token) => {
       if (err) return res.sendStatus(500);
+      console.log(err);
       if (token) {
         return res.status(200).send({ id: id, loginToken: token });
       } else {
         Users.setLoginToken(id, (err, token) => {
           if (err) return res.sendStatus(500);
+          console.log(err);
           return res.status(200).send({ id: id, loginToken: token });
         });
       }
