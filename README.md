@@ -1,4 +1,4 @@
-# CalorieTracker Pro - Your Personal Nutrition Assistant
+# Chomplog - Your Personal Nutrition Assistant
 
 Description:
 Chomplog is a user-friendly web application designed to help users monitor their daily caloric intake and maintain a healthy lifestyle. This intuitive platform allows users to easily search, track, and analyse the nutritional content of their meals with precision and convenience.
