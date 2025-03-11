@@ -18,7 +18,7 @@ const db = new sqlite3.Database("./database.sqlite", (err) => {
     created_at TEXT
     loginToken TEXT
 )`);
-    // -- Searches table (for search history)
+    // -- Searches table 
     db.run(`CREATE TABLE IF NOT EXISTS searches (
     id INTEGER PRIMARY KEY,
     user_id INTEGER NOT NULL,
