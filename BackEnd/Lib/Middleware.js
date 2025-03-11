@@ -1,5 +1,5 @@
 //author @james
-const Users = require("../Chomplog-main/Models/Users.Models");
+const Users = require("../Group11-main/Models/Users.Models");
 const loggedIn = function (req, res, next) {
   let XAuth = req.get("Authorization");
  // Coco made a little change on author @James code
