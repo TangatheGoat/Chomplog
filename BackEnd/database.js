@@ -15,7 +15,7 @@ const db = new sqlite3.Database("./database.sqlite", (err) => {
     email TEXT UNIQUE,
     password TEXT,
     salt TEXT,
-    created_at TEXT
+    created_at TEXT,
     loginToken TEXT
 )`);
     // -- Searches table 

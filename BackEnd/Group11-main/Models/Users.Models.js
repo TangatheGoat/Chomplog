@@ -1,5 +1,4 @@
 //@degas123
-const { query } = require("express");
 const database = require("../../database");
 const crypto = require("crypto");
 
@@ -8,6 +7,7 @@ const getHash = function (password, salt) {
     .pbkdf2Sync(password, salt, 100000, 256, "sha256")
     .toString("hex");
 };
+
 
 const create_account = (user, done) => {
   const salt = crypto.randomBytes(64);
@@ -73,7 +73,7 @@ const removeLoginToken = (token, done) => {
 
 const getId = (token, done) => {
   const sql = "SELECT id FROM users WHERE loginToken=?";
-  db.get(sql, [token], (err, row) => {
+  database.get(sql, [token], (err, row) => {
     if (err) return done(err);
     if (row) return done(null, row.id);
     return done(null, null);

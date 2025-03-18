@@ -8,10 +8,6 @@ const loggedIn = function (req, res, next) {
       return res.status(401).send("Unauthorized");
     }  // the end of change
   
-   //Users.getIdFromXAuth(XAuth, (err, id) => {
-   // if (err || id == null) {
-    //  return res.statuse(401).send("id is null");
-    //}
     return id, next();
   });
 };
