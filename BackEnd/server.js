@@ -29,7 +29,7 @@ require('./Group11-main/Routes/User.Routes')(app);
 
 
 
-
+// James did some changed on API route code
 // Calories API route
 app.get('/api/calories', (req, res) => {
   var query = req.query.food;
