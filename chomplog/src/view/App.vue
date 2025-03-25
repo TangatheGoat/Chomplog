@@ -12,7 +12,7 @@
 </button>
 <nav class="nav" :class="{ 'nav-open': showMenu }">
 <ul>
-  <li><a href ="#">Home</a></li>
+  <li><RouterLink href ="#">Home</RouterLink></li>
   <li><a href ="#">About</a></li>
   <li><a href ="#">Contact</a></li>
 </ul>
@@ -27,7 +27,11 @@
   
   <div class="input-circle"></div>
   
-</div>
+</div>#
+
+<RouterView/>
+
+
   <div class="NHS-links">
     <a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/" class="nhs-info-link">Balance diet</a>
 <a href="https://www.nhs.uk/better-health/lose-weight/calorie-counting/"class="nhs-info-link">  Understanding Calories</a>  
