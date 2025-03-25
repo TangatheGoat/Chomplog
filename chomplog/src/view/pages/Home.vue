@@ -8,7 +8,7 @@
 
 
     <div class="image-container">
-      <img src="./assets/food.jpeg" alt="Food Image" class="hero-image">
+      <img src="../../assests/background.png" alt="Food Image" class="hero-image">
     </div>
 
     <main>
@@ -65,7 +65,7 @@
   /* Global Styling */
   .container {
     background-color: #e8f5e9;
-    min-height: 100vh;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +75,6 @@
    
   /* Header */
   .web-header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,7 +136,7 @@
   /* Main Content */
   .content {
     text-align: center;
-    max-width: 800px;
+    
     background: white;
     padding: 20px;
     border-radius: 10px;
