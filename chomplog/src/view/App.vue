@@ -18,19 +18,7 @@
 </ul>
 </nav>
 </header>
-<div class="web-intro">
-  <p>"Chomplog your own calorie tracker"</p>
-</div>
-
-<div class="background-image">
-  <img src="../src/assests/background.png" alt=" Image">
-  
-  <div class="input-circle"></div>
-  
-</div>#
-
 <RouterView/>
-
 
   <div class="NHS-links">
     <a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/" class="nhs-info-link">Balance diet</a>
