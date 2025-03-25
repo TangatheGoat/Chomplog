@@ -1,4 +1,5 @@
 <template>
+  <!-- coded by @Maryam -->
   <div class="content">
     <header>
       <h1 class="title">Chomplog</h1>
