@@ -8,7 +8,7 @@
 
 
     <div class="image-container">
-      <img src="../../assests/background.png" alt="Food Image" class="hero-image">
+      <img src="../../assests/food.jpg" alt="Food Image" class="hero-image">
     </div>
 
     <main>
