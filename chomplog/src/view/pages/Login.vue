@@ -24,20 +24,6 @@
         <button type="submit">Login</button>
       </form>
     </div>
-
-    <!-- NHS Links -->
-    <div class="NHS-links">
-      <a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/" class="nhs-info-link">
-        Balance diet
-      </a>
-      <a href="https://www.nhs.uk/better-health/lose-weight/calorie-counting/" class="nhs-info-link">
-        Understanding Calories
-      </a>
-      <a href="https://www.nhsinform.scot/healthy-living/food-and-nutrition/healthy-eating-and-weight-management/tips-on-how-to-maintain-a-healthy-weight/"
-        class="nhs-info-link">
-        Weight maintenance
-      </a>
-    </div>
   </div>
 </template>
 
