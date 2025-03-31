@@ -2,22 +2,6 @@
 
 <template>
   <div class="app-container">
-    <!-- Header -->
-    <header class="web-header">
-      <div class="web-logo">
-        <img src="@/assets/Logo.png" alt="Chomplog Logo" class="logo" />
-        <h1>Chomplog</h1>
-      </div>
-      <button class="menu" @click="toggleMenu">&#9776;</button>
-      <nav class="nav" :class="{ 'nav-open': showMenu }">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <!-- Introduction -->
     <div class="web-intro">
       <p>"Chomplog your own calorie tracker"</p>
@@ -54,25 +38,6 @@
         Weight maintenance
       </a>
     </div>
-
-    <!-- Footer -->
-    <footer class="web-footer">
-      <div class="web-footer-copyright">
-        <p>&copy; 2025 Chomplog All rights reserved.</p>
-      </div>
-      <div class="web-footer-content">
-        <div class="web-footer-section">
-          <h3>Address</h3>
-          <p>1 Paradise Street</p>
-          <p>Planet, Mars, M12 5RE</p>
-        </div>
-        <div class="web-footer-section">
-          <h3>Contact us</h3>
-          <p>+44 6542 57788</p>
-          <p>help@Chomplog.com</p>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
