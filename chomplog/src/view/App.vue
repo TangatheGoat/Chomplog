@@ -3,7 +3,7 @@
 <template>
   <header class="web-header">
 <div class="web-logo">
-<img src="../assests/logo.png" alt="Chomplog Logo">
+<img src="../src/assests/Logo.png" alt="Chomplog Logo">
 <h1>Chomplog</h1>
 </div>
 
@@ -12,8 +12,8 @@
 </button>
 <nav class="nav" :class="{ 'nav-open': showMenu }">
 <ul>
-  <li><RouterLink to="/">Home</RouterLink></li>
-  <li><RouterLink to="/login">login</RouterLink></li>
+  <li><RouterLink href ="#">Home</RouterLink></li>
+  <li><a href ="#">About</a></li>
   <li><a href ="#">Contact</a></li>
 </ul>
 </nav>
@@ -47,8 +47,6 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router';
-
 export default {
   name: 'Header',
   data(){

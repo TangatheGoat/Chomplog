@@ -16,7 +16,7 @@
       <div class="section">
         <h2 class="section-title">Welcome to Chomplog</h2>
         <p class="section-text">Your personal calorie tracker for a healthier lifestyle.</p>
-        <button @click="$router.push('/login')" class="btn">Start Logging</button>
+        <button @click="$router.push('/log')" class="btn">Start Logging</button>
       </div>
 
       <!-- About Section -->
