@@ -13,6 +13,7 @@ const db = new sqlite3.Database("./database.sqlite", (err) => {
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     username TEXT,
     email TEXT UNIQUE,
+    gender TEXT,
     password TEXT,
     salt TEXT,
     created_at TEXT,

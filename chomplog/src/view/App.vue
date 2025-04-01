@@ -14,7 +14,7 @@
 <ul>
   <li><RouterLink to="/">Home</RouterLink></li>
   <li><RouterLink to="/login">login</RouterLink></li>
-  <li><a href ="#">Contact</a></li>
+  <li><RouterLink to ="/register">register</RouterLink></li>
 </ul>
 </nav>
 </header>
