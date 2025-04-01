@@ -2,7 +2,6 @@
 
 <template>
   <div class="app-container">
-
     <!-- Introduction -->
     <div class="web-intro">
       <p>"Chomplog your own calorie tracker"</p>
@@ -25,7 +24,6 @@
         <button type="submit">Login</button>
       </form>
     </div>
-
   </div>
 </template>
 

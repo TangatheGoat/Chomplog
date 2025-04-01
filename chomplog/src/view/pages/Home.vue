@@ -1,5 +1,5 @@
 <template>
-  <!-- coded by @Maryam -->
+  <!-- coded by @Maryam edited by James-->
   <div class="content">
     <header>
       <h1 class="title">Chomplog</h1>
@@ -8,7 +8,7 @@
 
 
     <div class="image-container">
-      <img src="../../assests/background.png" alt="Food Image" class="hero-image">
+      <img src="../../assests/food.jpg" alt="Food Image" class="hero-image">
     </div>
 
     <main>
@@ -33,13 +33,6 @@
         <button @click="learnMore" class="btn">Learn More</button>
       </div>
     </main>
-  </div>
-
-  <!-- NHS Links -->
-  <div class="NHS-links">
-    <a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/" class="nhs-info-link">Balanced Diet</a>
-    <a href="https://www.nhs.uk/better-health/lose-weight/calorie-counting/" class="nhs-info-link">Understanding Calories</a>
-    <a href="https://www.nhsinform.scot/healthy-living/food-and-nutrition/healthy-eating-and-weight-management/tips-on-how-to-maintain-a-healthy-weight/" class="nhs-info-link">Weight Maintenance</a>
   </div>
   </template>
   <script>
