@@ -8,7 +8,7 @@ const password = new RegExp(
 // creates the users account. auther @James
 const create_account = (req, res) => {
   const schema = Joi.object({
-    username: Joi.string().min(4).required(),
+    userName: Joi.string().min(4).required(),
     email: Joi.string()
       .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
       .required(),

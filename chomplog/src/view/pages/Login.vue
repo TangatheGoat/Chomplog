@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { UserService } from "../../services/User.service"
 export default {
   data() {
     return {
