@@ -1,4 +1,6 @@
 // All the code in this Login page was done by Mohammed-Huzayl Anwar
+// scripts ipdated by james.
+// page impmentaded by james.
 
 <template>
   <div class="app-container">
@@ -27,8 +29,9 @@
   </div>
 </template>
 
-<script>
-import { UserService } from "../../services/User.service"
+<script> 
+import { UserService } from '../../services/User.service';
+
 export default {
   data() {
     return {
@@ -46,7 +49,12 @@ export default {
         return;
       }
       this.passwordError = '';
-      console.log('Logging in with:', this.email, this.password);
+      UserService.login(this.email,this.password)
+      .then(results=>{
+        if (results){
+          console.log('Logging in with:', this.email, this.password);
+        }
+      })
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;

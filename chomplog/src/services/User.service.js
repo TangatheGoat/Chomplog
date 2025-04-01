@@ -1,16 +1,21 @@
 //auther @James
+// Mohammed-Huzayl Anwar added user login.
 
-const RegisterUser = (userName, email, password) => {
+const RegisterUser = (userName, email, gender, password) => {
   return fetch("http://localhost:3000/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       userName: userName,
       email: email,
+      gender: gender,
       password: password,
     }),
   })
     .then((response) => {
+      console.log(typeof(gender));
+      console.log("here!");
+      console.log(response);
       if (response.status == 201) {
         return "Registered";
       } else if (response.status === 400) {
@@ -32,13 +37,16 @@ const RegisterUser = (userName, email, password) => {
       return Promise.reject(error);
     });
 };
-const login = async (email, password) => {
-  const response = await fetch(`http://localhost:5173/login`, {
+
+
+const login =(email, password) => {
+  return fetch(`http://localhost:3000/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
   })
     .then((response) => {
+      console.log(response)
       if (!response.ok) throw new Error("Invalid login credentials.");
       return response.json();
     })

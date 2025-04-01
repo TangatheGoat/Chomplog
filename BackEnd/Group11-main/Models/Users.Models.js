@@ -13,8 +13,8 @@ const create_account = (user, done) => {
   const salt = crypto.randomBytes(64);
   const hash = getHash(user.password, salt);
   const query =
-    "INSERT INTO users (username, email, password, salt) VALUES (?,?,?,?)";
-  let users = [user.username, user.email, hash, salt.toString("hex")];
+    "INSERT INTO users (username, email, gender, password, salt) VALUES (?,?,?,?,?)";
+  let users = [user.userName, user.email,user.gender, hash, salt.toString("hex")];
 
   database.run(query, users, function (err) {
     if (err) {

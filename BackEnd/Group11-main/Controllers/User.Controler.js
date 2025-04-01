@@ -12,9 +12,11 @@ const create_account = (req, res) => {
     email: Joi.string()
       .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
       .required(),
+      gender: Joi.string(),
     password: Joi.string().regex(password).required(),
   });
   const { error } = schema.validate(req.body);
+  console.log("heer "+error)
 
   if (error)
     return res.status(400).send({ error_message: error.details[0].message });
@@ -26,6 +28,7 @@ const create_account = (req, res) => {
           error_message: `Email '${users.email}' already has an account.`,
         });
       } else {
+        console.log("errr"+ err)
         return res.status(500).send(err);
       }
     }
@@ -35,7 +38,6 @@ const create_account = (req, res) => {
 
 const login = (req, res) => {
   const schema = Joi.object({
-    // what are we using for the login detales
     email: Joi.string().required(),
     password: Joi.string().required(),
   });
