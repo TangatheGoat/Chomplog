@@ -25,7 +25,13 @@
         </div>
         <button type="submit">Login</button>
       </form>
+      <p>
+      Dont have an account? <router-link to="/register">Register</router-link>
+    </p>
     </div>
+    <p>
+     
+    </p>
   </div>
 </template>
 
@@ -43,18 +49,21 @@ export default {
   },
   methods: {
     handleLogin() {
+      const {email , password} = this
       const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[%^&*()\-+!]).{4,20}$/;
       if (!passwordRegex.test(this.password)) {
         this.passwordError = "Password must be 4-20 characters, include at least one uppercase letter, one lowercase letter, one number, and one special character.";
         return;
       }
-      this.passwordError = '';
-      UserService.login(this.email,this.password)
+      UserService.login(email,password)
       .then(results=>{
         if (results){
-          console.log('Logging in with:', this.email, this.password);
+          console.log('Logging in with:', email, password);
+          window.location.reload()
         }
+
       })
+      .catch(passwordError => this.passwordError = passwordError);
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;

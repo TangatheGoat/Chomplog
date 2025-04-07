@@ -1,7 +1,7 @@
 //auther @James
 // Mohammed-Huzayl Anwar added user login.
 
-const RegisterUser = (userName, email, gender, password) => {
+const RegisterUser = async (userName, email, gender, password) => {
   return fetch("http://localhost:3000/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -13,7 +13,7 @@ const RegisterUser = (userName, email, gender, password) => {
     }),
   })
     .then((response) => {
-      console.log(typeof(gender));
+      console.log(typeof gender);
       console.log("here!");
       console.log(response);
       if (response.status == 201) {
@@ -38,21 +38,23 @@ const RegisterUser = (userName, email, gender, password) => {
     });
 };
 
-
-const login =(email, password) => {
+const login = async (email, password) => {
   return fetch(`http://localhost:3000/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email: email, password: password }),
   })
     .then((response) => {
-      console.log(response)
+      console.log(response);
       if (!response.ok) throw new Error("Invalid login credentials.");
-      return response.json();
+
+      if (response.status == 200) {
+        return response.json();
+      }
     })
     .then((resJson) => {
-      localStorage.setItem("user_id", resJson.user_id);
-      localStorage.setItem("session_token", resJson.session_token);
+      localStorage.setItem("id", resJson.id);
+      localStorage.setItem("loginToken", resJson.loginToken);
       return resJson;
     })
     .catch((error) => {
@@ -60,19 +62,19 @@ const login =(email, password) => {
     });
 };
 
-const logout = () => {
+const logout = async () => {
   return fetch("http://localhost:3000/logout", {
     method: "POST",
 
     headers: {
       "Content-Type": "application/json",
-      "X-Authorization": localStorage.getItem("session_token"),
+      Authorization: localStorage.getItem("loginToken"),
     },
   })
     .then((response) => {
       if (response.status == 200) {
-        localStorage.removeItem("session_token");
-        localStorage.removeItem("user_id");
+        localStorage.removeItem("loginToken");
+        localStorage.removeItem("id");
         return "logout";
       } else {
         console.log(response.status);
