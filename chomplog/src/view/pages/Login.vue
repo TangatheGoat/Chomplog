@@ -1,6 +1,6 @@
-// All the code in this Login page was done by Mohammed-Huzayl Anwar
+<!-- // All the code in this Login page was done by Mohammed-Huzayl Anwar
 // scripts ipdated by james.
-// page impmentaded by james.
+// page impmentaded by james. -->
 
 <template>
   <div class="app-container">

@@ -1,5 +1,6 @@
-//auther @James
-// Mohammed-Huzayl Anwar added user login.
+//auther @James added the RegisterUsers.
+// @Mohammed-Huzayl Anwar added user login.
+// @Maryam Nizam Ismail added logout.
 
 const RegisterUser = async (userName, email, gender, password) => {
   return fetch("http://localhost:3000/users", {
@@ -76,10 +77,13 @@ const logout = async () => {
         localStorage.removeItem("loginToken");
         localStorage.removeItem("id");
         return "logout";
-      } else {
+      } else if(response.status === 401 ){
         console.log(response.status);
         console.log(response);
         return response.json();
+      }
+      else{
+        throw "Something went wrong"
       }
     })
     .then((resJson) => {
@@ -87,6 +91,7 @@ const logout = async () => {
     })
 
     .catch((error) => {
+      console.log("Err",error)
       return Promise.reject(error);
     });
 };

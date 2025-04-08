@@ -1,6 +1,7 @@
+<!--auther @luke  -->
 <template>
   <div class="app-container">
-    <!-- Introduction -->
+    <!-- Introduction --> 
      
     <div class="web-intro">
       <p>"Chomplog your own calorie tracker"</p>
@@ -21,7 +22,7 @@
         <label for="gender">Gender:</label>
         <select id="gender" v-model="gender" class="form-control" required>
           <option value="">--Select Gender--</option>
-          <option value="male">Male</option>
+          <option value="male">Male</option>s
           <option value="female">Female</option>
         </select>
 
@@ -58,10 +59,7 @@ export default {
         alert("Passwords do not match!");
         return;
       }
-    //   console.log('Username:', this.username);
-    //   console.log('Email:', this.email);
-    //   console.log('Gender:', this.gender);
-    //   console.log('Password:', this.password);
+
       UserService.RegisterUser(this.username,this.email,this.gender,this.password)
       .then((response)=>{
         if(response&& response.error_message)
