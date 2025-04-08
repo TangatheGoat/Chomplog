@@ -176,7 +176,7 @@ export default {
     width: 100%;
     text-align: center;
     margin-top: 0.7rem;
-    font-size: 0.7rem;
+   
   }
 
 
@@ -288,6 +288,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
   .web-footer p {

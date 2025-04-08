@@ -134,7 +134,7 @@
    <style scoped>
    
 
-  @media (max-width: 2000px) {
+  @media screen {
     .web-intro {
     font-size: 1rem;
     color: #3D5315;
@@ -262,7 +262,7 @@ padding-left: 0.75%
   transform: scale(1.05);
 }
 .calorie-result {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 0.9rem;
   color: #3D5315;
