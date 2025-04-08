@@ -32,7 +32,7 @@
 
   <footer class="web-footer">
     <div class="web-footer-copyright">
-      <p>&copy; 2025 Chomplog All rights reserved.</p>s
+      <p>&copy; 2025 Chomplog All rights reserved.</p>
     </div>
     <div class="web-footer-content">
       <div class="web-footer-section">
@@ -176,6 +176,7 @@ export default {
     width: 100%;
     text-align: center;
     margin-top: 0.7rem;
+    font-size: 0.7rem;
   }
 
 
@@ -185,7 +186,9 @@ export default {
   }
 
   .web-footer-section {
-    font-size: 0.5rem;
+    margin-right: 7rem;
+    font-size: 0.7rem;
+    margin-left: 7rem;
 
   }
 }
@@ -293,6 +296,7 @@ export default {
   }
 
   .web-footer-section {
+   
     font-size: 0.5rem;
   }
 }

@@ -133,7 +133,7 @@
    <style scoped>
    
 
-  @media (max-width: 1076px) {
+  @media (max-width: 2000px) {
     .web-intro {
     font-size: 1rem;
     color: #3D5315;
